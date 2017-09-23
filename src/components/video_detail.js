@@ -21,6 +21,6 @@ const VideoDetail = ({video})=>{
 			</div>
 		</div>
 	)
-};
+}
 
 export default VideoDetail;

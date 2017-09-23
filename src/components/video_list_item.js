@@ -18,7 +18,7 @@ const VideoListItem = ({video, onVideoSelect})=>{
 				</div>
 			</div>
 		</li>
-	);
-};
+	)
+}
 
 export default VideoListItem;
