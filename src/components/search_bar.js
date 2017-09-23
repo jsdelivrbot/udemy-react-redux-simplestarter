@@ -5,17 +5,21 @@ class SearchBar extends Component {
 		// This is how we initialize state in a class based component
 		super(props);
 
-		this.state = { term: 'Starting value' };
+		this.state = { term: '' };
+	}
+
+	onInputChange(term){
+		this.setState({term});
+		this.props.onSearchTermChange(term);
 	}
 
 	render(){
 		return(
-			<div>
+			<div className="search-bar">
 				<input
 					value = {this.state.term}
-					onChange={event => this.setState({ term: event.target.value })}
+					onChange={event => this.onInputChange(event.target.value)}
 				/>
-				{/*Value of the input: {this.state.term}*/}
 			</div>
 		);
 	}
